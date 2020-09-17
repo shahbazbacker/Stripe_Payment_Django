@@ -1,0 +1,28 @@
+{% load static %} 
+
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="{% static 'main.js' %}"></script> 
+  </head>
+  <body>
+    
+    <h3>{{product.name}}</h3>
+    <h5>{{product.description}}</h5>
+    <h5>{{product.price}}</h5>
+    
+    {% comment %} <form action="/create-checkout-session/" method="POST">
+    {% csrf_token %} 
+    <input type="hidden" value="{{product.id}}" name="productId">
+    </form> {% endcomment %}
+    <section class="section">
+      <div class="container">
+        <button class="button is-primary" id="submitBtn">Purchase!</button>
+      </div>
+    </section>
+
+  </body>
+
+</html>

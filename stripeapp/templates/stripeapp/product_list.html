@@ -1,0 +1,11 @@
+{% for product in product_list %}
+
+<a href="{% url 'detail' pk=product.pk %}"><h3>{{product}}</h3></a>
+
+
+
+<hr>
+{% endfor %}
+
+
+    
